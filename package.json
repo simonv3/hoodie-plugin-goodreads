@@ -1,10 +1,13 @@
 {
-  "name": "hoodie-plugin-isbn",
-  "description": "Hoodie plugin to fetch isbn data from isbndb.com",
+  "name": "hoodie-plugin-goodreads",
+  "description": "Hoodie plugin to access Goodreads API",
   "dependencies": {
-    "requests": "^2.47.0"
+    "request": "^2.47.0",
+    "goodreads": "0.0.2",
+    "xml2json": "0.5.1",
+    "oauth": "0.9.12"
     },
-  "version": "0.1.1",
+  "version": "0.0.1",
   "scripts": {},
   "main":"index.js",
   "maintainers": [

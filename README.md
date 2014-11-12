@@ -1,17 +1,14 @@
 Hoodie ISBN Plugin
 ======================
 
-> A hood.ie plug-in that fetches data from isbndb.com. Needs a isbndb.com API key.
+> A hood.ie plug-in that does the oauth dance with goodreads. That's it for now.
 
 ## Usage
 
 ```js
-hoodie.isbn.searchbooks({
-  query: val
-}).fail(function(){
-  // handle error
-}).done(function(search){
-  // handle search result
-  results = search.result.data;
-});
+hoodie.goodreads.getinfo({username: hoodie.account.username}).fail(function(){
+    // fail case
+  }).done(function(data){
+    // data.goodreads_exists
+  });
 ```

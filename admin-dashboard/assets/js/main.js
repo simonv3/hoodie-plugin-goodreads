@@ -29,8 +29,9 @@ $(function () {
         if (err) {
             return alert(err);
         }
-        console.log('hello');
-        $('[name=isbnDbKey]').val(doc.config.isbn_db_key);
+        console.log(doc.config.goodreads_api_key);
+        $('[name=goodreadsApiKey]').val(doc.config.goodreads_api_key);
+        $('[name=goodreadsApiSecret]').val(doc.config.goodreads_api_secret);
     });
 
     function setSubmitButtonToSaving(form){
@@ -58,13 +59,13 @@ $(function () {
     }
 
     // save app info on submit
-    $('#isbnKeyForm').submit(function (ev) {
-        console.log('logging');
+    $('#goodreadsApiForm').submit(function (ev) {
         var el = this;
         ev.preventDefault();
         setSubmitButtonToSaving(this);
         var cfg = {
-            isbn_db_key: $('[name=isbnDbKey]').val()
+            goodreads_api_key: $('[name=goodreadsApiKey]').val(),
+            goodreads_api_secret: $('[name=goodreadsApiSecret]').val()
         };
         updateConfig(cfg, function (err) {
             if (err) {

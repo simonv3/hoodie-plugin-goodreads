@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ISBN DB</title>
+  <title>Goodreads API</title>
 
   <!-- Admin Dashboard UIKit CSS -->
   <link rel="stylesheet" href="/_api/_plugins/_assets/styles/admin-dashboard-uikit.css">
@@ -11,14 +11,18 @@
 <body>
   <div class="container">
     <h1>
-      ISBN Config settings
+      Goodreads API Key
     </h1>
-    <form id="isbnKeyForm">
+    <form id="goodreadsApiForm">
       <fieldset>
-        <label for="isbnDbKey">ISBN Dev Key</label>
-        <input type="text" class="form-control" placeholder="Enter ISBNDB Key" required name="isbnDbKey">
+        <label for="goodreadsApiKey">Goodreads API Key</label>
+        <input type="text" class="form-control" placeholder="Enter Goodreads API Key" required name="goodreadsApiKey">
         <p class="help-block">Required.</p>
-        <button class="submit btn" type="submit">Save ISBN-DB info</button>
+
+        <label for="goodreadsApiSecret">Goodreads API Secret</label>
+        <input type="text" class="form-control" placeholder="Enter Goodreads API Secret" required name="goodreadsApiSecret">
+        <p class="help-block">Required.</p>
+        <button class="submit btn" type="submit">Save Goodreads Info</button>
       </fieldset>
     </form>
   </div>
